@@ -15,7 +15,5 @@ import entities from './typeorm/index';
     entities,
     synchronize:true,
   }) ],
-  controllers: [UserController],
-  providers: [ ],
 })
 export class AppModule {}
