@@ -1,12 +1,12 @@
 import { Body, Controller, Post, ValidationPipe } from '@nestjs/common';
-import { Inject, UsePipes } from '@nestjs/common/decorators';
+import {  UsePipes } from '@nestjs/common/decorators';
 import { UserService } from 'src/services/users/user.service';
 import { CreateUserDto } from './usermodule/dto/createUser.dto';
 
 
 @Controller('signup')
 export class UserController {
-    constructor(@Inject() private readonly userService: UserService){}
+    constructor(private readonly userService: UserService){}
 
     @Post('create')
     @UsePipes(ValidationPipe)

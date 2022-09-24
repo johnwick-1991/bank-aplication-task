@@ -18,7 +18,7 @@ export class User{
         nullable:false,
         default:'',
     })
-    fullName:string;
+    fullname:string;
 
     @Column({
         name: 'email_Address',

@@ -11,7 +11,7 @@ import entities from './typeorm/index';
     port: 3306,
     username: 'root',
     password: '@@karlito1991@@',
-    database: 'bankuser',
+    database: 'bankappusers',
     entities,
     synchronize:true,
   }) ],
