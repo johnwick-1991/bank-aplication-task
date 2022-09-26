@@ -14,7 +14,7 @@ import entities from './typeorm/index';
       host: 'localhost',
       port: 3306,
       username: 'root',
-      password: 'adamiani123',
+      password: '@@karlito1991@@',
       database: 'bankappusers',
       entities,
       synchronize: true,
