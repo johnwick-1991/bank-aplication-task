@@ -1,7 +1,7 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Operator {
+export class User {
   @PrimaryGeneratedColumn()
   id: string;
 
@@ -20,6 +20,4 @@ export class Operator {
   })
   password: string;
 
-  @Column({ default: true })
-  isActive: boolean;
 }

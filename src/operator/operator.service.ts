@@ -1,4 +1,4 @@
-import { User } from '../typeorm/User';
+import { User } from 'src/Users/model/User.entity';
 import { CreateOperatorDto, LoginOperatorDto } from './dto/operator.dto';
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -53,7 +53,7 @@ export class OperatorService {
     console.log(personalId);
 
     const user = await this.usersRepository.findOneBy({
-      personal_id: personalId,
+      id: personalId
     });
     return user;
   }

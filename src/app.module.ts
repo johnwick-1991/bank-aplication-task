@@ -1,14 +1,16 @@
 import { OperatorModule } from './operator/operator.module';
 import { Module } from '@nestjs/common';
-import { UsersModule } from './users/user.module';
-import { UserController } from './users/user.controller';
+import { UserModule } from './Users/User.module';
+import { TransferModule } from './transfer/transfer.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import entities from './typeorm/index';
 
+
 @Module({
   imports: [
-    UsersModule,
+    UserModule,
     OperatorModule,
+    TransferModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
