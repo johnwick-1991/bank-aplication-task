@@ -17,16 +17,17 @@ export class RecordTransferHandler implements ICommandHandler<RecordTransferComm
         private readonly eventBus:EventBus
        
     ){}
+
      async execute(command: RecordTransferCommand): Promise<any> {
 
-        const id = uuid.v4();
+        const id = uuid.v2();
         const transfer = new TransferEntity(
             id,
             command.amount,
             command.originId,
             command.targetCurrency,
             command.originCurrency,
-            command.targetId,
+            command.targetId.toString()
             );
          await this.TransferRepo.save(transfer)
          this.eventBus.publish(new RecordedTransfer(id));

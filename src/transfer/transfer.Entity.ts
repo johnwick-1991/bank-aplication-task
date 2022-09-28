@@ -19,7 +19,7 @@ export class TransferEntity{
     targetCurrency: Currency;
 
     @Column('uuid')
-    originId: String
+    originId: string;
 
     @Column('uuid')
     targetId: string;
@@ -29,9 +29,9 @@ export class TransferEntity{
         id:string,
         amount:number,
         originCurrency:Currency,
+        targetCurrency: Currency,
         originId: string,
         targetId: string,
-        targetCurrency: Currency,
     ){
         this.id = id;
         this.amount = amount;

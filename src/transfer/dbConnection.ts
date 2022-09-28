@@ -1,1 +1,1 @@
-export const dbConnection ='dbConnectiom'
+export const dbConnection ='dbConnection'
